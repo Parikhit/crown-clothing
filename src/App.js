@@ -10,7 +10,7 @@ import Authentication from './routes/authentication/authentication.component';
 
 import {
     onAuthStateChangedListener,
-    createUserDocumentFromAuth,
+    createUserDocumentFromAuth
 } from './utils/firebase/firebase.utils';
 
 import { setCurrentUser } from './store/user/user.action';
@@ -24,10 +24,13 @@ const App = () => {
                 createUserDocumentFromAuth(user);
             }
 
-            dispatch(setCurrentUser(user));
+            /**
+             * cause of error
+             */
+            // dispatch(setCurrentUser(user));
         });
         return unsubscribe;
-    }, [dispatch]);
+    }, []);
 
     return (
         <Routes>

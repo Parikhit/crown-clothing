@@ -10,9 +10,18 @@ export const NavigationContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
+    display: flex;
+    align-items: center;
     height: 100%;
-    width: 70px;
-    padding: 25px;
+    width: 100%;
+    padding: 20px;
+
+    .logo-name {
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: 10px;
+        padding: 20px;
+    }
 `;
 
 export const NavLinks = styled.div`

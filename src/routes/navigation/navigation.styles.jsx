@@ -21,6 +21,10 @@ export const LogoContainer = styled(Link)`
         font-weight: 500;
         margin-top: 10px;
         padding: 20px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 `;
 

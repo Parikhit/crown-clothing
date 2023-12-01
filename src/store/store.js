@@ -1,9 +1,6 @@
-// import { configureStore } from '@reduxjs/toolkit';
-
 import { compose, createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 // import { loggerMiddleware } from './middleware/logger';
-
 import { rootReducer } from './root-reducer';
 import storage from 'redux-persist/lib/storage';
 import logger from 'redux-logger';
@@ -39,8 +36,3 @@ export const store = createStore(persistedReducer, undefined, composedEnhancers)
 sagaMiddleware.run(rootSaga);
 
 export const persistor = persistStore(store);
-
-// export const store = configureStore({
-//     reducer: persistedReducer,
-//     middleware: [process.env.NODE_ENV !== 'production' && logger, thunk].filter(Boolean)
-// });
